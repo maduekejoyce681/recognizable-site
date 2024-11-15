@@ -1,0 +1,533 @@
+/*Global Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Lato, sans-serif;
+}
+
+/** Variable Declaration ******************************************************************************************/
+:root{
+    --primary-color-skyblue:#32d4d7;
+    --primary-color-white: #fefefe;
+    --primary-color-black: #0a0a0a;
+    --primary-color-grey:#f1f1f1;
+}
+
+/** Reusable Components *******************************************************************************************/
+.row::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.row [class^="col-"]{
+    float: left;
+}
+
+.col-1-of-2{
+    width: calc(100% / 2);
+}
+
+.col-1-of-3{
+    width: calc(100% / 3);
+}
+
+/** Heading Section  **********************************************************************************************/
+
+/** Utility Classes  **********************************************************************************************/
+.extra-spacing{padding: 40px 0;}
+.u-text-align{ text-align: center;}
+.u-margin-bootom-md{margin-bottom: 60px;}
+
+/** Button Section ************************************************************************************************/
+.btn{
+    padding: 12px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn.btn-black{
+    background-color: var(--primary-color-black);
+    color: var(--primary-color-white);
+    border: 2px solid transparent;
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: var(--primary-color-black);
+    border-color:  var(--primary-color-black);
+}
+
+.btn.btn-white{
+    background-color: var(--primary-color-white);
+    color: var(--primary-color-black);
+    border: 2px solid transparent;
+}
+
+.btn.btn-white:hover{
+    border-color: var(--primary-color-black);
+}
+
+.btn.btn-skyblue{
+    background-color: var(--primary-color-skyblue);
+    color: var(--primary-color-white);
+    border: 2px solid transparent;
+}
+
+.btn.btn-skyblue:hover{
+    border-color: var(--primary-color-skyblue);
+    background-color: transparent;
+    color: var(--primary-color-black);
+}
+
+.btn-2{
+    background-color: var(--primary-color-white);
+    border: 2px solid var(--primary-color-skyblue);
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all .3s;
+    text-decoration: none;
+    color: var(--primary-color-black);
+    font-size: 12px;
+}
+
+.btn-2:hover{
+    color: var(--primary-color-skyblue);}
+
+.btn-2-black{
+    background-color: var(--primary-color-black);
+    color: var(--primary-color-white);
+    border: 2px solid transparent;
+}
+
+.btn-2-black:hover{
+    background-color: transparent;
+    border-color: var(--primary-color-skyblue);
+}
+
+/** Header Section  ***********************************************************************************************/
+.header{
+    height: 90vh;
+}
+
+/** Navigation Section  *******************************************************************************************/
+.nav-contents-container{
+    margin: 0 auto;
+    max-width: 1140px;
+    background-color:  var(--primary-color-white);
+    padding: 10px 0;
+}
+
+.nav-menu-contents::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.left-nav-contents{
+    float: left;
+}
+
+.right-nav-contents{
+    float: right;
+    cursor: pointer;
+}
+
+.brand{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/** Hero Section  *************************************************************************************************/
+.hero{
+   padding-top: 70px;
+   max-width: 1140px;
+   margin: 0 auto;
+}
+
+.hero-textbox{
+    padding-right: 50px;
+}
+
+.hero-main-heading{
+    font-weight: bolder;
+    font-size: 80px;
+    line-height: 75px;
+}
+
+.hero-para{
+   margin: 40px 0;
+}
+
+.hero-image-container img{
+   width: 100%; 
+}
+
+/** Features Section  *********************************************************************************************/
+.section-features{
+    text-align: center;
+}
+
+.features-heading{
+    font-size: 25px;
+    font-weight: 700;
+    padding-top: 50px;
+    color: var(--primary-color-white);  
+}
+
+.features-para{
+    color: var(--primary-color-white);
+    padding: 20px 40px;
+    font-weight: 400;
+}
+
+.features-quality-product{
+    background-color: var(--primary-color-black);}
+    
+
+.features-growth-strategy{
+    background-color: var(--primary-color-skyblue)}
+
+.features-competitive-price{
+    background-color: #0dbabd;}
+
+
+/** About Us Section  *********************************************************************************************/
+.section-about-us{
+    background-color: var(--primary-color-white);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about-icon{font-size: 100px;}
+
+.about-main-heading{ margin: 20px 0;}
+
+.about-us-para-container{
+    margin-bottom: 50px;
+   
+}
+
+.about-us-para{
+    margin: 0 auto;
+    width: 75%;
+    font-size: 16px;
+}
+
+
+/** Advert Section  ***********************************************************************************************/
+.section-advert{
+    padding: 50px 0;
+}
+
+.advert-textbox{
+    background-color: var(--primary-color-skyblue);
+    padding: 52px 50px;
+    color: var(--primary-color-white);
+}
+
+.advert-main-heading{
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--primary-color-white);
+}
+
+.advert-para-1{
+    margin: 30px 0;    
+}
+
+.advert-para-2{
+    margin-bottom: 40px;
+}
+
+.advert-image-container img{
+    width: 100%;
+    height: 447px;
+    object-fit: cover;
+}
+
+/** Services Section  *********************************************************************************************/
+.section-service{
+    padding: 100px 0;
+    text-align: center;
+}
+
+.services-main-heading{
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.services-main-para{
+    margin-bottom: 55px;
+}
+
+.service-icon-circle{
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: var(--primary-color-skyblue);   
+}
+
+.services-icon{
+    font-size: 25px;
+    color: var(--primary-color-white);
+    line-height: 50px;
+}
+
+.service-content-heading{
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.service-content-para{
+    padding: 0 50px;
+}
+
+/** Communication Section  ***************************************************************************************************/
+.section-communication{
+    padding-top: 100px;
+}
+
+.communication-textbox{
+    background-color: var(--primary-color-grey);
+    padding: 70px 70px;
+}
+
+.communication-main-heading{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.communication-para-1{
+    margin: 25px 0;
+}
+
+.communication-para-2{
+    margin-bottom: 45px;
+}
+
+.communication-image-container img{
+    width: 100%;
+    height: 465px;
+    object-fit: cover;
+}
+
+.cta-container{
+    background-color: var(--primary-color-skyblue);
+    color: var(--primary-color-white);
+    width: 100%;
+    margin-top: 40px;
+}
+
+.cta-container::after{
+    content: "";
+    clear: both;
+    display: table; 
+}
+
+.cta-left{
+    float: left;
+    padding: 30px 0;
+    padding-left: 70px;
+    width: 50%;
+}
+
+.cta-right{
+    float: right;
+    padding: 60px 100px;
+}
+
+.cta-heading{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.cta-para{
+    font-size: 14px;
+}
+
+/** Business Section  ***************************************************************************************************/
+.section-business{
+    padding-top: 20px;
+}
+
+.section-business h2{
+    margin-bottom: 10px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.business-para{
+    color: #000;
+}
+
+.business-content-space{
+    height: 400px;
+}
+
+/** Business Section  ***************************************************************************************************/
+.section-footer{
+    background-color: var(--primary-color-black);
+    color: var(--primary-color-white);
+    margin-top: 40px;
+    width: 100%;
+    height: 50px;
+    padding: 10px 0;
+}
+
+.section-footer span{
+    font-size: 12px;
+    
+}
+
+/* Media query for device width less or equal to 900px (Tablet, Ipad) */
+@media screen and (max-width: 900px){
+    .row{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .row [class^="col-"] {
+        float: none;
+        width: 100%;
+    }
+
+    .hero-main-heading {
+        line-height: 90px;
+    }
+
+    .hero-textbox {
+        padding: 0 20px;
+        margin-bottom: 60px;
+    }
+
+    .about-us-para {
+        font-size: 15px;
+    }
+
+    .section-features {
+       margin-top: 200px;
+    }
+
+    .advert-textbox {
+        margin-top: 50px;
+    }
+
+    .service-content-para {
+        padding: 0 81px;
+        margin-bottom: 50px;
+    }
+
+    .section-communication {
+        padding-top: 60px;
+    }
+
+    .communication-textbox {
+       margin-bottom: 60px;
+    }
+
+    .cta-container {
+        margin-top: 50px;
+        padding: 40px 20px;
+    }
+
+    .cta-left {
+        float: none;
+        padding: 0px;
+        padding-left: 0px;
+        width: 80%;
+    }
+
+    .cta-para {
+        margin-bottom: 30px;
+    }
+
+    .cta-right {
+        float: none;
+        padding: 0px 0px;
+    }
+
+    /* Media query for device width less or equal to 900px (mobile phone) */
+    @media screen and (max-width:480px){
+        .row{
+            padding: 0 30px;
+        }
+
+        .hero-main-heading {
+            font-weight: bolder;
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        .hero {
+            padding-top: 30px;
+        }
+
+        .section-features {
+          margin-top: 230px;
+        }
+
+        .section-about-us {
+            padding: 50px 0px;
+        }
+
+        .about-us-para {
+            font-size: 14px;
+            width: 80%;
+        }
+
+        .advert-textbox {
+            padding: 25px 15px;
+
+        }
+      
+        .section-service {
+            padding: 50px 0;
+        }
+           
+        .services-main-para {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .service-icon-circle {
+            margin: 30px auto;
+        }
+
+        .service-content-para {
+            padding: 0 24px;
+        }       
+
+        .communication-textbox {
+            padding-top: 30px;
+            padding-left: 10px;
+            padding-bottom: 30px;
+            padding-right: 10px;
+        }
+
+        .cta-left {
+            float: none;
+            padding: 0px;
+            padding-left: 0px; 
+            width: 100%;  
+        }
+
+        .cta-para {
+            margin-bottom: 30px;
+        }
+
+        .business-para {
+            padding: 0 20px;
+        }     
+    }    
+}
